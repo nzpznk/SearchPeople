@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form method="get" action="result.html">
+                {% csrf_token %}
+                <label>关键词</label>
+                <input type="text" size="30" maxlength="75" value="" name = 'keywords' />
+                <input type="submit" value="搜索" />
+        </form>
+        <form method="post" action="result.html">
+                {% csrf_token %}
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label>Name</label></td>
+                        <td><input type="text" size="30" maxlength="75" value="" name = 'name' /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Born</label></td>
+                        <td><input type="text" size="30" maxlength="75" value="" name = 'Born' /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Nationality</label></td>
+                        <td><input type="text" size="30" maxlength="75" value="" name = 'Nationality' /></td>
+                    </tr>
+                    <tr>
+                        <td><label>Fields</label></td>
+                        <td><input type="text" size="30" maxlength="75" value="" name = 'Fields' /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="高级搜索" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

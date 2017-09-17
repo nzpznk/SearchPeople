@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type = "text/css">
+        table{border-right:1px solid #1B55D1;border-bottom:1px solid #1B55D1} 
+        table td{border-left:1px solid #1B55D1;border-top:1px solid #1B55D1} 
+    </style>
+</head>
+<body>
+    <!-- <a href = {{ person.imgurl }} >nzp</a> -->
+    <table>
+            <tr align = "center">
+                <td align = "center">
+                    {% load static %}
+                    <img src="{% static info.imgurl %}" />
+                </td>
+            </tr>
+        {% for key, value in info.person.items %}
+        {% if key == 'id' or key == 'imgurl' %}
+
+        {% else %}
+        <tr>
+            <td>{{ key }}</td>
+            <td>{{ value }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
